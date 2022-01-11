@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class movement : MonoBehaviour
 {
@@ -23,12 +24,20 @@ public class movement : MonoBehaviour
 
         if (Input.GetKeyDown("space"))
         {
-            if (!gameManager.GetComponent<gameManager>().gameStarted)
+            if (!gameManager.GetComponent<gameManager>().gameStarted && !gameManager.GetComponent<gameManager>().gameOver)  //if game has not yet started and player is not dead.
             {
                 gameManager.GetComponent<gameManager>().startGame();
             }
+            else if(gameManager.GetComponent<gameManager>().gameOver) //if the player has died
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
+            else
+            {
+                body.velocity = (Vector2.up * 4);
+            }
             
-            body.velocity = (Vector2.up * 4);
+            
         }
 
     }

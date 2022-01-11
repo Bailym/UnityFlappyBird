@@ -23,6 +23,6 @@ public class playerDeath : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        gameManager.GetComponent<gameManager>().endGame();
+        gameManager.GetComponent<gameManager>().playerDied();
     }
 }
