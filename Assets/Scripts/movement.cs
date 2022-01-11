@@ -5,15 +5,15 @@ using UnityEngine;
 public class movement : MonoBehaviour
 {
 
-    public Rigidbody2D body;
-    public BoxCollider2D playerCollider;
+    private Rigidbody2D body;
+    private Transform playerTransform; 
 
 
     // Start is called before the first frame update
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
-        playerCollider = GetComponent<BoxCollider2D>();
+        playerTransform = GetComponent<Transform>();
         
     }
 
@@ -26,10 +26,5 @@ public class movement : MonoBehaviour
             body.velocity = (Vector2.up * 4);
         }
 
-    }
-
-    private void FixedUpdate()
-    {
-        
     }
 }

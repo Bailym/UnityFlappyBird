@@ -4,17 +4,24 @@ using UnityEngine;
 
 public class movePipes : MonoBehaviour
 {
+    private Transform pipeTransform;
+    public float despawnXPos;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        pipeTransform = GetComponent<Transform>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        float xPos = pipeTransform.position.x;
+
+        if (xPos <= despawnXPos)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void FixedUpdate()

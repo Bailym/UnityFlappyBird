@@ -59,6 +59,7 @@
     <Compile Include="Assets\Scripts\movement.cs" />
     <Compile Include="Assets\Scripts\spawnPipes.cs" />
     <Compile Include="Assets\Scripts\movePipes.cs" />
+    <Compile Include="Assets\playerDeath.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
