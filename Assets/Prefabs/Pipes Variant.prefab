@@ -96,6 +96,10 @@ PrefabInstance:
       value: -3.08
       objectReference: {fileID: 0}
     - target: {fileID: 5138953747964069958, guid: e369d9ddb5fa7fa4d976fbbe1f49e233, type: 3}
+      propertyPath: scoreXPos
+      value: -2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5138953747964069958, guid: e369d9ddb5fa7fa4d976fbbe1f49e233, type: 3}
       propertyPath: despawnXPos
       value: -5
       objectReference: {fileID: 0}

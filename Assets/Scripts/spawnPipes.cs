@@ -28,7 +28,6 @@ public class spawnPipes : MonoBehaviour
         int len = prefabPipes.Count;
 
         int randNum = Random.Range(0, len);
-        Debug.Log(randNum);
 
         Instantiate(prefabPipes[randNum], spawnPos, Quaternion.identity);
     }

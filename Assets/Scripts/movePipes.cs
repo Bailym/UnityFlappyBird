@@ -28,4 +28,6 @@ public class movePipes : MonoBehaviour
     {
         GetComponent<Rigidbody2D>().velocity = Vector2.left * 150 * Time.deltaTime;
     }
+
+    
 }
