@@ -6,8 +6,8 @@ public class movement : MonoBehaviour
 {
 
     private Rigidbody2D body;
-    private Transform playerTransform; 
-
+    private Transform playerTransform;
+    public GameObject gameManager;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +23,11 @@ public class movement : MonoBehaviour
 
         if (Input.GetKeyDown("space"))
         {
+            if (!gameManager.GetComponent<gameManager>().gameStarted)
+            {
+                gameManager.GetComponent<gameManager>().startGame();
+            }
+            
             body.velocity = (Vector2.up * 4);
         }
 
